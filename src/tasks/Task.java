@@ -1,6 +1,8 @@
+package tasks;
+
 public class Task {
-    private TaskState state = TaskState.OPEN;
-    private String taskName;
+    protected TaskState state = TaskState.OPEN;
+    protected String taskName;
     private Task nextTask;
     private Task previousTask;
 

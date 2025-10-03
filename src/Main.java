@@ -6,11 +6,15 @@
 // 2. 실행 대기열에 있는 태스크를 실행하고 태스크 수행이 완료되면 완료 표시를 함.
 // 3. 그래프의 모든 태스크가 완료될 때까지 1단계로 돌아감.
 
+import tasks.MySQLOperatorTask;
+import tasks.PythonOperatorTask;
+import tasks.Task;
+
 public class Main {
     public static void main(String[] args) {
         // 태스크 정의
-        Task task = new Task("task 1");
-        Task task2 = new Task("task 2");
+        Task task = new PythonOperatorTask("task 1");
+        Task task2 = new MySQLOperatorTask("task 2");
         task.nextTask(task2);
 
         Graph graph = new Graph("test task");
